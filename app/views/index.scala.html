@@ -1,0 +1,23 @@
+@(title: String, items: java.util.List[String])
+
+    @layout(title) {
+        <div class="row">
+            <div class="col-xs-12">
+                <form action="@routes.Application.index()" method="post">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="content" name="content">
+                    </div>
+                    <button type="submit" class="btn btn-default">Gordon~~</button>
+                </form>
+                <hr/>
+            </div>
+
+        </div>
+        <div class="row">
+        @for(item <- items) {
+            <div class="col-xs-12">
+                <a href="@item">@item</a>
+            </div>
+        }
+        </div>
+    }
